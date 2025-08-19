@@ -15,14 +15,14 @@ import apiRouter from "#apiroutes/api-v1.js";
 const app = express();
 app.use(express.json());
 const port = 3000;
-const dev = process.env.DEV === "true"; // Check if we are in development mode
+const isProd = process.env.ISPROD === "true"; // Check if we are in prod
 
 // Enable CORS if in DEV mode
-if (dev) {
+if (!isProd) {
   app.use(
     cors({
       credentials: true,
-      origin: dev ? "http://localhost:5173" : process.env.FRONTEND_URL,
+      origin: isProd ? process.env.FRONTEND_URL : "http://localhost:5173",
     })
   );
 }
@@ -50,7 +50,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 10, // 5 hours
-      secure: dev ? false : true,
+      secure: isProd ? true : false,
       httpOnly: true,
       sameSite: "lax",
     },
@@ -59,8 +59,8 @@ app.use(
   })
 );
 
-// Serve static files from the React build directory if not in dev mode
-if (!dev) {
+// Serve static files from the React build directory if in prod mode
+if (isProd) {
   // Setup for static serving
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);
