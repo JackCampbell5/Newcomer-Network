@@ -5,9 +5,9 @@ import { prisma } from "#utils/constants.js";
 import { hashPassword } from "#utils/auth-utils.js";
 
 // Seed Data to import
-import serviceJson from "#seed/updatedServices.json" with { type: "json" };
-import nonprofitJson from "#seed/nonprofits.json" with { type: "json" };
-import employees from "#seed/employees.json" with { type: "json" };
+import serviceJson from "#dev-seed/updatedServices.json" with { type: "json" };
+import nonprofitJson from "#dev-seed/nonprofits.json" with { type: "json" };
+import employees from "#dev-seed/employees.json" with { type: "json" };
 import formatAddress from "#utils/search/address-utils.js";
 
 
