@@ -1,0 +1,929 @@
+[
+  {
+    "name": "Sacramento Family Food & Support Services",
+    "address": "3333 3rd Ave, Sacramento, CA 95817",
+    "zipcode": "95817",
+    "description": "Provides food and family services to individuals and families in need.",
+    "phone": "+1 916-456-1980",
+    "email": "info@sacramentofoodbank.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:30:00.000Z",
+        "end": "1899-12-31T09:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": "https://www.sacramentofoodbank.org/wp-content/uploads/2019/08/logo-sfbfs.png",
+    "language": ["arabic", "farci", "spanish", "english", "pashto"],
+    "date_needed": "5-6-2024",
+    "services_offered": [
+      "food_assistance",
+      "family_support",
+      "job_training",
+      "legal_assistance"
+    ],
+    "restrictions": "Proof of residency and income may be required for some services.",
+    "next_steps": "Visit the website or call for information on services and how to apply."
+  },
+  {
+    "name": "Loaves and Fishes Outreach",
+    "address": "1351 N C St, Sacramento, CA 95811",
+    "zipcode": "95811",
+    "description": "Provides survival services, such as meals, showers, and laundry facilities, for homeless men, women, and children.",
+    "phone": "+1 916-446-0836",
+    "email": "info@sacloaves.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "english", "pashto"],
+    "date_needed": "9-9-2023",
+    "services_offered": ["mental_health_education", "job_training"],
+    "restrictions": "None mentioned.",
+    "next_steps": "Visit the campus during operating hours for assistance."
+  },
+  {
+    "name": "Sacramento Humane Society",
+    "address": "6201 Florin-Perkins Rd, Sacramento, CA 95828",
+    "zipcode": "95828",
+    "description": "Provides shelter, veterinary care, and adoption services for animals in the Sacramento region.",
+    "phone": "+1 916-383-7387",
+    "email": "info@sspca.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": "https://www.sspca.org/wp-content/uploads/2021/04/sacramento-spca-logo-2021.png",
+    "language": ["farci", "english", "pashto"],
+    "date_needed": "8-30-2023",
+    "services_offered": [
+      "education",
+      "immigrant_services",
+      "mental_health_education",
+      "mentorship"
+    ],
+    "restrictions": "Adoption fees apply. Spay/neuter services may have income restrictions.",
+    "next_steps": "Visit the shelter during open hours or browse available animals online for adoption. Call for veterinary appointments."
+  },
+  {
+    "name": "McDonald House Charities of NorCal",
+    "address": "2555 49th St, Sacramento, CA 95817",
+    "zipcode": "95817",
+    "description": "Provides a 'home away from home' for families of children receiving medical care at nearby hospitals.",
+    "phone": "+1 916-734-4230",
+    "email": "info@rmhcnc.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": "https://www.rmhcnc.org/wp-content/uploads/2020/09/rmhc-logo.png",
+    "language": ["arabic", "farci", "spanish", "english"],
+    "date_needed": "5-22-2023",
+    "services_offered": [
+      "mental_health_education",
+      "job_training",
+      "immigrant_services"
+    ],
+    "restrictions": "Families must have a child receiving medical care at a partner hospital.",
+    "next_steps": "Contact the house directly or speak with hospital social workers to arrange a stay."
+  },
+  {
+    "name": "Sacramento Children’s Care Home",
+    "address": "3555 Auburn Blvd, Sacramento, CA 95821",
+    "zipcode": "95821",
+    "description": "Provides emergency shelter and support services for children who have experienced abuse or neglect.",
+    "phone": "+1 916-482-2300",
+    "email": "info@crhs.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      { "start": "1899-12-31T07:30:00.000Z", "end": "1899-12-31T22:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "english"],
+    "date_needed": "1-20-2023",
+    "services_offered": [
+      "education",
+      "refugee_&_immigrant_resettlement",
+      "legal_assistance",
+      "mental_health_education",
+      "education",
+      "food_assistance"
+    ],
+    "restrictions": "Services are for children under the auspices of the Department of Health and Human Services and the Superior Court.",
+    "next_steps": "Contact Child Protective Services or law enforcement if you are concerned about a child's safety. Contact the Receiving Home directly for information on their services."
+  },
+  {
+    "name": "Fathers and Families Resource Center",
+    "address": "1731 K St, Sacramento, CA 95814",
+    "zipcode": "95814",
+    "description": "Strengthens families and builds communities by offering programs and services focused on father involvement.",
+    "phone": "+1 916-574-9444",
+    "email": "info@cffsacramento.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T22:00:00.000Z"
+      },
+      { "start": "1899-12-31T07:30:00.000Z", "end": "1899-12-31T22:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "english", "pashto"],
+    "date_needed": "5-12-2023",
+    "services_offered": [
+      "job_training",
+      "mentorship",
+      "family_support",
+      "financial_assistance"
+    ],
+    "restrictions": "None mentioned.",
+    "next_steps": "Visit the website or call for information on programs and enrollment."
+  },
+  {
+    "name": "Steps Forward Sacramento",
+    "address": "1000 G St, Sacramento, CA 95814",
+    "zipcode": "95814",
+    "description": "Works to end homelessness in Sacramento County by providing coordinated services and advocacy.",
+    "phone": "+1 916-577-9770",
+    "email": "info@sacramentostepsforward.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "english", "pashto"],
+    "date_needed": "3-13-2023",
+    "services_offered": [
+      "education",
+      "job_training",
+      "refugee_&_immigrant_resettlement",
+      "legal_assistance"
+    ],
+    "restrictions": "Clients must meet program eligibility requirements.",
+    "next_steps": "If you are experiencing homelessness, call 2-1-1 or visit a Coordinated Access System (CAS) access point for assistance."
+  },
+  {
+    "name": "Alta Regional Support Center",
+    "address": "2241 Harvard St #100, Sacramento, CA 95815",
+    "zipcode": "95815",
+    "description": "Provides services and support for individuals with developmental disabilities and their families.",
+    "phone": "+1 916-978-6400",
+    "email": "info@altaregional.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["english", "spanish"],
+    "date_needed": "2-11-2023",
+    "services_offered": ["financial_assistance", "education", "family_support"],
+    "restrictions": "Must meet California's eligibility criteria for developmental disabilities services.",
+    "next_steps": "Visit the website or call to begin the intake and assessment process."
+  },
+  {
+    "name": "City Service Corps Sacramento",
+    "address": "3301 Broadway, Sacramento, CA 95817",
+    "zipcode": "95817",
+    "description": "Places young adults in public schools to serve as tutors and mentors.",
+    "phone": "+1 916-403-3700",
+    "email": "sacramento@cityyear.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T23:59:59.999Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "english", "pashto"],
+    "date_needed": "4-2-2023",
+    "services_offered": ["mentorship", "legal_assistance", "food_assistance"],
+    "restrictions": "Students must be enrolled in partner schools.",
+    "next_steps": "Contact your child's school to inquire about City Year's presence and services."
+  },
+  {
+    "name": "Team Giving Network",
+    "address": "2030 W El Camino Ave #210, Sacramento, CA 95833",
+    "zipcode": "95833",
+    "description": "Connects volunteers with local nonprofits to strengthen the Sacramento community.",
+    "phone": "+1 916-824-2118",
+    "email": "info@teamgiving.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T18:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T18:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T18:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T18:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T18:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["farci", "pashto"],
+    "date_needed": "1-20-2023",
+    "services_offered": [
+      "mental_health_education",
+      "food_assistance",
+      "financial_assistance",
+      "job_training",
+      "immigrant_services"
+    ],
+    "restrictions": "None mentioned.",
+    "next_steps": "Visit the website to browse volunteer opportunities and register as a volunteer."
+  },
+  {
+    "name": "Sacramento LGBTQ+ Community Center",
+    "address": "1927 L St, Sacramento, CA 95811",
+    "zipcode": "95811",
+    "description": "Provides a safe space, resources, and support to the LGBTQ+ community in Sacramento.",
+    "phone": "+1 916-442-0185",
+    "email": "info@saccenter.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:00:00.000Z",
+        "end": "1899-12-31T16:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "spanish", "pashto"],
+    "date_needed": "1-20-2023",
+    "services_offered": [
+      "legal_assistance",
+      "legal_assistance",
+      "education",
+      "financial_assistance",
+      "mental_health_education"
+    ],
+    "restrictions": "None mentioned for most services. Emergency shelter and some specific programs may have eligibility requirements.",
+    "next_steps": "Visit the website or call for information on resources and programs"
+  },
+  {
+    "name": "Sacramento Environmental Council",
+    "address": "909 12th St., Suite 203, Sacramento, CA 95814",
+    "zipcode": "95812",
+    "description": "A coalition that works to achieve regional sustainability, livable communities, environmental justice, and a healthy environment and economy in the Sacramento region.",
+    "phone": "+1 916-444-6725",
+    "email": "ecosacramento@ecosacramento.net",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "english"],
+    "date_needed": "2-21-2023",
+    "services_offered": [
+      "immigrant_services",
+      "refugee_&_immigrant_resettlement",
+      "financial_assistance",
+      "education",
+      "job_training",
+      "legal_assistance"
+    ],
+    "restrictions": "None mentioned.",
+    "next_steps": "Visit the website to learn about current initiatives, volunteer opportunities, and how to get involved."
+  },
+  {
+    "name": "Northern California Legal Aid",
+    "address": "517 12th St, Sacramento, CA 95814",
+    "zipcode": "95814",
+    "description": "Provides free civil legal services to low-income, disabled, and senior clients in Northern California.",
+    "phone": "+1 916-551-2150",
+    "email": "info@lsnc.net",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T17:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["english", "spanish"],
+    "date_needed": "1-17-2024",
+    "services_offered": [
+      "legal_assistance",
+      "immigrant_services",
+      "mental_health_education",
+      "refugee_&_immigrant_resettlement"
+    ],
+    "restrictions": "Clients must meet income and residency requirements.",
+    "next_steps": "Visit the website or call to learn more about eligibility and how to apply for legal assistance."
+  },
+  {
+    "name": "NAMI Greater Sacramento",
+    "address": "PO Box 2533, Sacramento, CA 95812",
+    "zipcode": "95812",
+    "description": "Provides support, education, and advocacy for individuals and families affected by mental illness.",
+    "phone": "+1 916-890-5474 (Warmline)",
+    "email": "info@namisacramento.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T23:59:59.999Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "pashto"],
+    "date_needed": "8-4-2024",
+    "services_offered": [
+      "family_support",
+      "refugee_&_immigrant_resettlement",
+      "mentorship",
+      "legal_assistance"
+    ],
+    "restrictions": "None mentioned.",
+    "next_steps": "Visit the website or call the Warmline for support and information."
+  },
+  {
+    "name": "Area 4 Aging Agency",
+    "address": "2233 Watt Ave, Ste 150, Sacramento, CA 95825",
+    "zipcode": "95825",
+    "description": "Provides a variety of services to seniors and their families, including information and referral, nutrition assistance (CalFresh), transportation, and elder abuse prevention.",
+    "phone": "+1 916-486-1879",
+    "email": "info@agencyonaging4.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T23:59:59.999Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "english", "pashto"],
+    "date_needed": "9-23-2024",
+    "services_offered": [
+      "mental_health_education",
+      "job_training",
+      "food_assistance",
+      "legal_assistance",
+      "mentorship",
+      "financial_assistance"
+    ],
+    "restrictions": "Services may be limited to individuals 60 years or older or those with specific needs. Eligibility requirements may apply for some programs.",
+    "next_steps": "Visit the website or call for information on available services and eligibility requirements."
+  },
+  {
+    "name": "Sacramento Wildlife Rescue Association",
+    "address": "5211 Patrol Rd, McClellan Park, CA 95652",
+    "zipcode": "95652",
+    "description": "Rescues, rehabilitates, and releases local wildlife in the Sacramento region.",
+    "phone": "+1 916-965-9453",
+    "email": "info@wildlifecareassociation.com",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T10:00:00.000Z",
+        "end": "1899-12-31T12:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T08:30:00.000Z",
+        "end": "1899-12-31T09:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "english"],
+    "date_needed": "7-25-2024",
+    "services_offered": [
+      "mental_health_education",
+      "mentorship",
+      "financial_assistance"
+    ],
+    "restrictions": "None mentioned.",
+    "next_steps": "If you find injured or orphaned wildlife, contact the hotline immediately. Visit the website to learn how to help or become a volunteer."
+  },
+  {
+    "name": "Northern California Artists Collective",
+    "address": "3425 Folsom Blvd, Sacramento, CA 95816",
+    "zipcode": "95816",
+    "description": "Promotes the appreciation of and participation in the visual arts and spearheads art education in the Sacramento community.",
+    "phone": "+1 916-455-5201",
+    "email": "norcalartsinc@gmail.com",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T23:59:59.999Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "english"],
+    "date_needed": "2-6-2024",
+    "services_offered": [
+      "family_support",
+      "immigrant_services",
+      "education",
+      "food_assistance"
+    ],
+    "restrictions": "Some classes or events may have fees or membership requirements.",
+    "next_steps": "Visit the website for a schedule of events, classes, and exhibition information."
+  },
+  {
+    "name": "Sacramento 350 Climate Action",
+    "address": "4750 J St, Sacramento, CA 95819",
+    "zipcode": "95819",
+    "description": "A grassroots climate justice organization focused on collective action to create a safe global climate and accelerate the transition to a sustainable future.",
+    "phone": null,
+    "email": "info@350sacramento.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T17:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T17:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T17:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T17:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T17:30:00.000Z"
+      },
+      {
+        "start": "1899-12-31T07:30:00.000Z",
+        "end": "1899-12-31T17:30:00.000Z"
+      },
+      { "start": "1899-12-31T07:30:00.000Z", "end": "1899-12-31T17:30:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "farci", "spanish", "english", "pashto"],
+    "date_needed": "1-3-2022",
+    "services_offered": [
+      "family_support",
+      "immigrant_services",
+      "food_assistance",
+      "mentorship",
+      "refugee_&_immigrant_resettlement"
+    ],
+    "restrictions": "None mentioned.",
+    "next_steps": "Visit the website to learn about current campaigns, attend meetings, or become a volunteer."
+  },
+  {
+    "name": "Capital City Pro Bono",
+    "address": "517 12th St, Sacramento, CA 95814",
+    "zipcode": "95814",
+    "description": "Provides free legal assistance to low-income people in the Sacramento region.",
+    "phone": "+1 916-551-2101",
+    "email": "info@capitalprobono.org",
+    "website": "https://www.newcomernetwork.com",
+    "hours": [
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T23:59:59.999Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T23:59:59.999Z" }
+    ],
+    "logo": null,
+    "language": ["english", "spanish"],
+    "date_needed": "1-9-2023",
+    "services_offered": [
+      "refugee_&_immigrant_resettlement",
+      "education",
+      "job_training",
+      "mentorship"
+    ],
+    "restrictions": "Clients must meet income and residency requirements.",
+    "next_steps": "Visit the website or call for information on eligibility and how to apply for legal assistance."
+  },
+  {
+    "name": "California LGBTQ+ Alliance",
+    "address": "1201 K St, Sacramento, CA 95814",
+    "zipcode": "95814",
+    "description": "Supports the LGBTQ community through events and donations to charities, fosters civic engagement, and develops community leaders.",
+    "phone": "+1 916-491-1189",
+    "email": "info@california.lgbt",
+    "website": "https://www.newcomernetwork.com/",
+    "hours": [
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T09:00:00.000Z",
+        "end": "1899-12-31T15:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      {
+        "start": "1899-12-31T00:00:00.000Z",
+        "end": "1899-12-31T00:00:00.000Z"
+      },
+      { "start": "1899-12-31T00:00:00.000Z", "end": "1899-12-31T00:00:00.000Z" }
+    ],
+    "logo": null,
+    "language": ["arabic", "spanish", "pashto"],
+    "date_needed": "4-26-2024",
+    "services_offered": ["mental_health_education", "mentorship"],
+    "restrictions": "Scholarship eligibility requirements may apply.",
+    "next_steps": "Visit the website to learn about their initiatives, apply for scholarships, or get involved in community events."
+  }
+]

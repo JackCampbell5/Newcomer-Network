@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Demo Organization(Not Real Services)",
+    "phone": "000-000-0000",
+    "email": "demo@example.com",
+    "address": "2233 Watt Ave Ste. 110, Sacramento, CA 95825, US",
+    "website": "https://www.demo.org",
+    "logo": "https://i0.wp.com/generic.wordpress.soton.ac.uk/digital-learning/wp-content/uploads/sites/321/2017/11/DEMO.png?fit=399%2C166&ssl=1",
+    "color": "#000000"
+  },
+  {
+    "name": "Homes Not Borders",
+    "phone": "+1 301-349-1520",
+    "email": "info@homesnotborders.org",
+    "address": "3610 East St, North Englewood, MD 20785, US",
+    "website": "http://www.homesnotborders.org/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/International_Rescue_Committee_Logo.svg/640px-International_Rescue_Committee_Logo.svg.png",
+    "color": "#950007"
+  }
+]
