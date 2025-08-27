@@ -38,9 +38,10 @@
     "#recs/*": "./utils/recs/*",
     "#search-filters/*": "./utils/search-filters/*",
     "#api-helpers/*": "./utils/api-helpers/*",
-    "#seed/*": "./prisma/seed/*"
+    "#dev-seed/*": "./prisma/dev-seed/*",
+    "#prod-seed/*": "./prisma/prod-seed/*"
   },
   "prisma": {
-    "seed": "node prisma/seed/seed.js"
+    "seed": "node prisma/prod-seed/seed.js"
   }
 }

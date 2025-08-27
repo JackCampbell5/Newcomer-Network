@@ -5,9 +5,9 @@ import { prisma } from "#utils/constants.js";
 import { hashPassword } from "#utils/auth-utils.js";
 
 // Seed Data to import
-import serviceJson from "#seed/updatedServices.json" with { type: "json" };
-import nonprofitJson from "#seed/nonprofits.json" with { type: "json" };
-import employees from "#seed/employees.json" with { type: "json" };
+import serviceJson from "#prod-seed/services.json" with { type: "json" };
+import nonprofitJson from "#prod-seed/nonprofits.json" with { type: "json" };
+import employees from "#prod-seed/employees.json" with { type: "json" };
 import formatAddress from "#utils/search/address-utils.js";
 
 
@@ -15,34 +15,24 @@ async function main() {
   const currentServices = await prisma.service.findMany();
   const currentNonprofits = await prisma.nonprofit.findMany();
 
-  // Delete all existing data
-  await deleteAll();
 
-
-  // Get the Service Data ready for seeding
+  // // Get the Service Data ready for seeding
   let serviceList = await addLocationInformation(serviceJson, currentServices)  // Format the address info for services
-  // Get starting and ending indices for each nonprofit's slice of services
-  const serviceDistribution = [20, 20, 20, 20, 20]; // How to distribute services to nonprofits
-  const [serviceStart, serviceEnd] = distribute(serviceDistribution, serviceList.length, serviceList.length);
 
-  // Get the Employee Data ready for seeding
+  // // Get the Employee Data ready for seeding
   const employeeList = await hashPasswordList(employees); // Hash the passwords
-  // Get starting and ending indices for each nonprofit's slice of employees
-  const employeeDistribution = [10, 15, 10, 5, 0]; // How to distribute employees to nonprofits
-  const [employeeStart, employeeEnd] = distribute(employeeDistribution, employees.length, nonprofitJson.length);
 
-  // Get the nonprofitData ready for seeding
+  // // Get the nonprofitData ready for seeding
   let nonprofitList = await addLocationInformation(nonprofitJson, currentNonprofits);  // Get address info for nonprofits
 
-  let adminEmployeeList = await Promise.all(nonprofitList.map(async (nonprofit, num) => (await adminEmployee(num)))); // Create admin employees for each nonprofit
-
-  // Create nonprofits with services and employees
-  nonprofitList = nonprofitJson.map((nonprofit, num) => ({
-    ...nonprofit,
-    services: serviceList.slice(serviceStart[num], serviceEnd[num]),
-    employees: [...employeeList.slice(employeeStart[num], employeeEnd[num]), adminEmployeeList[num]],
-  }));
-
+  nonprofitList[0] = {...nonprofitList[0], services: serviceList, employees:employeeList};
+  
+  // Add me as a user
+  const me = {username:"hi",password:"None",email:"email@gmail.com"}
+  const passwordHash = await hashPassword(me.password);
+  const meHashed  = {...me, password: passwordHash}
+  nonprofitList[1] = {...nonprofitList[1], employees:[meHashed]};
+  nonprofitList = [nonprofitList[1]]
   // Create nonprofits and adds to database
   await Promise.all(
     nonprofitList.map(async (profitInfo) => {
@@ -97,17 +87,6 @@ async function adminEmployee(increment){
      email: "admin@admin.com"}
    }
 
-/**
- * Deletes all existing data
- */
-async function deleteAll(){
-  // Delete all existing data
-  await prisma.search_log.deleteMany();
-  await prisma.web_log.deleteMany();
-  await prisma.service.deleteMany();
-  await prisma.nonprofit_employee.deleteMany();
-  await prisma.nonprofit.deleteMany();
-}
 
 /**
  * Hash the passwords of a list of employees
