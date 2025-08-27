@@ -8,7 +8,7 @@ import "./FooterRefugee.css";
 function FooterRefugee() {
   return (
     <div className="FooterRefugee">
-      <p>Contact: StrongStart@gmail.com with any questions</p>
+      <p>Contact: newcomernetworkweb@gmail.com with any questions</p>
     </div>
   );
 }

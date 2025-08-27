@@ -37,7 +37,7 @@ function Dashboard() {
   return (
     <div className="Dashboard">
       <div className="dashHeader largeHeader">Dashboard</div>
-      <p>This will give directions on how to use Strong Start </p>
+      <p>This will give directions on how to use Newcomer Network </p>
       <div className="dashHeader smallHeader">Your Site</div>
       <p>How your sites doing</p>
       <div className="siteStats">

@@ -44,11 +44,11 @@ function SubPageSelect({ changePage }) {
       <IconComp />
       <main>
         <div className="flexContent">
-          <h1>Welcome to Strong Start!</h1>
+          <h1>Welcome to Newcomer Network!</h1>
           <p className="welcomeText">
-            Strong start is a site dedicated to matching refugees with essential
-            services. To get started, click a button below that matches what
-            your looking for. <br />
+            Newcomer Network is a site dedicated to matching refugees with
+            essential services. To get started, click a button below that
+            matches what your looking for. <br />
             {/* //TODO Maybe add more intro text here */}
             <br /> <strong>Refugee-</strong> A refugee looking to be matched
             with a service

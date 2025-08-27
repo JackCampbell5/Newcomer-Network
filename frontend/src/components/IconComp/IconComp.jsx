@@ -8,7 +8,7 @@ import "./IconComp.css";
 function IconComp() {
   return (
     <div className="IconComp">
-      <h1>Strong Start</h1>
+      <h1>Newcomer Network</h1>
     </div>
   );
 }

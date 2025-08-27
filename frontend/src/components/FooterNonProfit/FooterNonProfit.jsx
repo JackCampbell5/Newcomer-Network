@@ -17,7 +17,7 @@ import { setColorVariables } from "#utils/colorUtils";
 
 function FooterNonProfit({ data }) {
   // Constant Variables
-  const strongEmail = "strongStartWeb@gmail.com";
+  const strongEmail = "newcomernetworkweb@gmail.com";
   const name = data.name;
   const email = data.email;
   const phone = data.phone;
