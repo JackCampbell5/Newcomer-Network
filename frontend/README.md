@@ -1,8 +1,15 @@
 # Strong Start Frontend
 
-This is the frontend for the Strong Start project.
+The **Newcomer Network frontend** is built with **React** and styled with custom components.  
+It provides user-facing pages for both nonprofits and refugees, including service dashboards, search tools, and recommendation displays, all connected to the backend APIs.
 
 ## Setup
+
+Install Dependencies:
+
+```shell
+npm install
+```
 
 Start Server
 
@@ -10,7 +17,7 @@ Start Server
 npm run dev
 ```
 
-### Open-source libraries used
+## Open-source libraries used
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
@@ -18,7 +25,7 @@ npm run dev
 
 ## Style
 
-### CSS
+### CSS Ordering
 
 - Display / position / flex
 - Flexbox
