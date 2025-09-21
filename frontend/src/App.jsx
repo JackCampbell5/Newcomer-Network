@@ -7,6 +7,7 @@ import "./App.css";
 // Other Pages
 import NonProfitOverall from "#nonprofitPage/NonProfitOverall";
 import RefugeeOverall from "#refugeePage/RefugeeOverall";
+import RefugeeSelectNonProfit from "#components/RefugeeSelectNonProfit/RefugeeSelectNonProfit";
 // Other Components
 import SubPageSelect from "#components/SubPageSelect/SubPageSelect";
 // Util Functions
@@ -41,7 +42,10 @@ function App() {
           element={<SubPageSelect changePage={subPageChoose} />}
         />
         <Route path="/nonprofit/*" element={<NonProfitOverall />} />
-        <Route path="/refugee/" element={<div>hi</div>} />
+        <Route
+          path="/refugee/"
+          element={<RefugeeSelectNonProfit changePage={subPageChoose} />}
+        />
         <Route path="/refugee/*" element={<RefugeeOverall />} />
       </Routes>
     </div>

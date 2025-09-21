@@ -1,0 +1,70 @@
+/* Flexbox inside main for the flexbox which allows for centering*/
+.RefugeeSelectNonProfit .flexContent {
+  height: 80vh;
+  width: calc(100vw - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* The header pieces */
+.flexContent h1 {
+  margin-bottom: -1%;
+  font-size: 400%;
+}
+.flexContent h2 {
+  margin: 10px;
+  font-size: 200%;
+}
+.flexContent .welcomeText {
+  width: 70vw;
+}
+
+/* The dropdown for the nonprofits */
+.RefugeeSelectNonProfit .select-nonprofit select {
+  width: 40vw;
+  font-size: 150%;
+  background-color: var(--background-darker);
+  border: var(--border-mid) 5px solid;
+  border-radius: 15px;
+  color: var(--text);
+}
+.RefugeeSelectNonProfit .select-nonprofit select:hover {
+  background-color: var(--background-hover);
+}
+
+/* The Div with the buttons  */
+.RefugeeSelectNonProfit .select-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* The buttons themselves  */
+.RefugeeSelectNonProfit .select-button {
+  padding: 10px;
+  background: var(--background-darker);
+  border: 5px solid var(--border-mid);
+  border-radius: 10px;
+  font-size: 250%;
+  font-weight: bold;
+  transition: border-radius 0.3s ease-in-out;
+}
+
+.RefugeeSelectNonProfit .select-button:hover {
+  background: var(--background-hover);
+  cursor: pointer;
+  border-radius: 30px;
+  transition: border-radius 0.3s ease-in-out;
+}
+
+/* Make the icons look nice  */
+.RefugeeSelectNonProfit .select-button svg {
+  font-size: 140%;
+  vertical-align: bottom;
+}
