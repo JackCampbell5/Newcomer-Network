@@ -7,11 +7,12 @@ import "./App.css";
 // Other Pages
 import NonProfitOverall from "#nonprofitPage/NonProfitOverall";
 import RefugeeOverall from "#refugeePage/RefugeeOverall";
+import RefugeeSelectNonProfit from "#components/RefugeeSelectNonProfit/RefugeeSelectNonProfit";
 // Other Components
 import SubPageSelect from "#components/SubPageSelect/SubPageSelect";
 // Util Functions
 import { createPageNavigator } from "#utils/pathUtils";
-import { OverallPages } from "#utils/pathUtils";
+import { OverallPages, RPages } from "#utils/pathUtils";
 
 function App() {
   // Constant Variables
@@ -27,7 +28,7 @@ function App() {
     if (subPage === OverallPages.NONPROFIT) {
       pageNavigator("/nonprofit");
     } else if (subPage === OverallPages.REFUGEE) {
-      pageNavigator("/refugee");
+      pageNavigator(`/refugee/${RPages.HOME}`);
     } else {
       pageNavigator("/");
     }
@@ -41,6 +42,10 @@ function App() {
           element={<SubPageSelect changePage={subPageChoose} />}
         />
         <Route path="/nonprofit/*" element={<NonProfitOverall />} />
+        <Route
+          path="/refugee/"
+          element={<RefugeeSelectNonProfit changePage={subPageChoose} />}
+        />
         <Route path="/refugee/*" element={<RefugeeOverall />} />
       </Routes>
     </div>

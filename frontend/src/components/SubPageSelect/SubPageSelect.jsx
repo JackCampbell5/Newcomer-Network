@@ -12,7 +12,7 @@ import "./SubPageSelect.css";
 // Other Components
 import NonProfitSelector from "#components/NonProfitSelector/NonProfitSelector";
 // Util Functions
-import { QueryParams } from "#utils/pathUtils";
+import { QueryParams, OverallPages } from "#utils/pathUtils";
 import { setColorVariables } from "#utils/colorUtils";
 
 function SubPageSelect({ changePage }) {
@@ -63,14 +63,14 @@ function SubPageSelect({ changePage }) {
           <div className="select-div">
             <div
               className="select-buttons"
-              onClick={() => onRoleClick("refugee")}
+              onClick={() => onRoleClick(OverallPages.REFUGEE)}
             >
               <IoEarth />
               Refugee
             </div>
             <div
               className="select-buttons"
-              onClick={() => onRoleClick("nonprofit")}
+              onClick={() => onRoleClick(OverallPages.NONPROFIT)}
             >
               <FaHandsHelping />
               Non-Profit

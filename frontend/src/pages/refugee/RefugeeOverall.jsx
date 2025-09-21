@@ -46,7 +46,7 @@ function RefugeeOverall() {
   useEffect(() => {
     // Move to homepage if no stats
     if (!nonprofit) {
-      navigate("/");
+      navigate("/refugee");
     } else {
       fetchNonProfitInfo(nonprofit).then(fetchNonProfitInfoCallback);
     }
@@ -57,7 +57,7 @@ function RefugeeOverall() {
       <NavRefugee onNavigate={nav} />
       <div className="mainContent">
         <Routes>
-          <Route path="" element={<Home />} />
+          <Route path={`/${RPages.HOME}`} element={<Home />} />
           {/* The default path will probably end up as the home page*/}
           <Route path={`/${RPages.ALLSERVICES}`} element={<AllServices />} />
           <Route
