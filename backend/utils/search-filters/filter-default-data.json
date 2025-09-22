@@ -41,35 +41,6 @@
     "type": "date"
   },
   {
-    "id": "attend_time",
-    "name": "Attend Time",
-    "value": "",
-    "default": { "hours": "", "minutes": "", "amPm": "pm" },
-    "required": false,
-    "icon": "MdDateRange",
-    "tooltip": "What time it works best to go to the service",
-    "type": "time"
-  },
-  {
-    "id": "attend_day",
-    "name": "Attend Day",
-    "options": [
-      { "value": "monday", "label": "Monday" },
-      { "value": "tuesday", "label": "Tuesday" },
-      { "value": "wednesday", "label": "Wednesday" },
-      { "value": "thursday", "label": "Thursday" },
-      { "value": "friday", "label": "Friday" },
-      { "value": "saturday", "label": "Saturday" },
-      { "value": "sunday", "label": "Sunday" }
-    ],
-    "value": "",
-    "default": "None",
-    "required": false,
-    "icon": "MdDateRange",
-    "tooltip": "What day of the week it works best to go to the service",
-    "type": "dropdown"
-  },
-  {
     "id": "preference",
     "name": "Most Important Factors",
     "options": [
