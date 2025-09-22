@@ -152,9 +152,14 @@ function Service({ inputData }) {
                 </div>
                 <div className="serviceParamValue">
                   {obj.id === "address" ? (
-                    <a href={links?.route} target="_blank">
+                    <div>
                       {obj.value}
-                    </a>
+                      {" ("}
+                      <a href={links?.route} target="_blank">
+                        <strong>Directions</strong>
+                      </a>
+                      {")"}
+                    </div>
                   ) : obj.id === "website" ? (
                     <a href={obj.value} target="_blank">
                       {obj.value}
