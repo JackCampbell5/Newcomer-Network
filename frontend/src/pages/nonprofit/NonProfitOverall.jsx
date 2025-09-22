@@ -105,14 +105,14 @@ function NonProfitOverall() {
               path={`/${NpPages.CSV_IMPORT}`}
               element={<CsvImport nav={nav} />}
             />
+            <Route
+              path={`/${NpPages.REGISTER}`}
+              element={<RegisterPage setLoggedIn={setLoggedIn} nav={nav} />}
+            />
           </Route>
           <Route
             path={`/${NpPages.LOGIN}`}
             element={<LoginPage setLoggedIn={setLoggedIn} nav={nav} />}
-          />
-          <Route
-            path={`/${NpPages.REGISTER}`}
-            element={<RegisterPage setLoggedIn={setLoggedIn} nav={nav} />}
           />
         </Routes>
       </div>

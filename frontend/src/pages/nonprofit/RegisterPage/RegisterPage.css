@@ -1,4 +1,10 @@
 .RegisterPage {
   height: auto;
   width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.moreInfo {
+  width: max(60%, min(100%, 500px));
 }

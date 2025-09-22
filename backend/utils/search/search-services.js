@@ -173,7 +173,6 @@ function calculateRankingScoreForServices(foundServices, params, weights) {
     // If the current service does not offer the services we are looking for
     // do not add them to the results
     if (!serviceWeightAlreadyAdded) {
-      console.log(service.services_offered);
       continue;
     }
 

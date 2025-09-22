@@ -14,7 +14,7 @@ function NavRefugee({ onNavigate }) {
 
   return (
     <div className="NavRefugee">
-      <div className="navLogo" onClick={() => onNavigate("")}>
+      <div className="navLogo" onClick={() => onNavigate(RPages.HOME)}>
         <IconComp />
       </div>{" "}
       <h3>Refugee</h3>
@@ -24,7 +24,7 @@ function NavRefugee({ onNavigate }) {
             "navBarButton",
             (location === "refugee" || location === "") && "selected",
           ].join(" ")}
-          onClick={() => onNavigate("")}
+          onClick={() => onNavigate(RPages.HOME)}
         >
           Home
         </button>
