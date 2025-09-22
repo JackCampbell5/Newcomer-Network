@@ -32,7 +32,7 @@ function FooterNonProfit({ data }) {
     "(prefers-color-scheme: dark)"
   ).matches;
   // State Variables
-  const [darkMode, setDarkMode] = useState(darkModeGiven);
+  const [darkMode, setDarkMode] = useState(false); // Change to dark mode given to use auto dark mode
 
   /**
    * When the dark mode button is clicked, toggle the dark mode state and change the color variables to fit accordingly

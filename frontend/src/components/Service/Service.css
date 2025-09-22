@@ -142,12 +142,12 @@
   margin: 0px;
   overflow-x: auto;
   border-collapse: collapse;
-  border: 2px solid var(--border-light);
 }
 
 /* The table itself */
 .Service .serviceParam .serviceParamValue table {
   border-collapse: collapse;
+  border: 5px solid var(--border-light);
 }
 
 /* The table and column and rows  */

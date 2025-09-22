@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: center;
 }
-.Help .helpText {
-  width: 50%;
+.Help .help-page {
+  width: max(50%, min(900px, 90vw));
+}
+
+.Help .help-page {
+  text-align: left;
 }

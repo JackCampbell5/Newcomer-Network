@@ -28,12 +28,13 @@ employeeRouter.get("/", async (req, res, next) => {
 
 // Default is to get all nonprofits
 employeeRouter.get("/all", async (req, res, next) => {
-  const findNonProfits = await prisma.nonprofit_employee.findMany();
-  // Hide the password
-  for (let employee of findNonProfits) {
-    employee.password = "*********";
-  }
-  res.status(200).json(findNonProfits);
+  res.send(`Welcome to ${nonprofit.name}'s employee database!`);
+  // const findNonProfits = await prisma.nonprofit_employee.findMany();
+  // // Hide the password
+  // for (let employee of findNonProfits) {
+  //   employee.password = "*********";
+  // }
+  // res.status(200).json(findNonProfits);
 });
 
 // Get one nonprofit by id (No get by name for security)
