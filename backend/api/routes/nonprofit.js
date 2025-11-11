@@ -12,6 +12,7 @@ import { generateStats } from "#api-helpers/nonprofit-stat-utils.js";
 import {
   checkNonProfitName,
   checkNonProfitId,
+  stateCodeToName,
 } from "#api-helpers/nonprofit-utils.js";
 import formatAddress from "#search/address-utils.js";
 import { checkLogin } from "#utils/session-utils.js";
@@ -39,7 +40,9 @@ nonprofitRouter.get("/all/short", async (req, res, next) => {
     const foundNonProfits = await prisma.nonprofit.findMany();
     const after = foundNonProfits.map((nonprofit) => ({
       id: nonprofit.id,
-      text: nonprofit.name,
+      text: `${nonprofit.name}(${stateCodeToName(
+        nonprofit?.addressInfo?.postalAddress?.administrativeArea || ""
+      )} Region)`,
     }));
     res.status(200).json(after);
   } catch (e) {

@@ -8,11 +8,15 @@ import { prisma } from "#utils/constants.js";
 
 export async function importCSV(file, nonprofit) {
   let csvObject = await parseCSV(file);
+
   if (!csvObject.valid) {
     return errorReturn(csvObject.error);
   } else {
     csvObject = csvObject.data;
   }
+  csvObject = csvObject.filter((row) =>
+    Object.values(row).some((value) => value.trim() !== "")
+  );
   const servicesWithErrors = await addAllServicesAndGetErrors(
     csvObject,
     nonprofit
@@ -56,19 +60,31 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
   let formattedData = [];
   let num = 0;
   for (const row of csvObject) {
+    for (const key in row) {
+      if (typeof row[key] === "string") {
+        row[key] = row[key].trim();
+      }
+    }
     let serviceData = row;
     const name = serviceData.name;
     const exists = await checkServiceNameBoolean(name, nonprofit); //If a service were to exist
-    const serviceDataWithHours = addHoursData(serviceData);
+    let error = exists ? "Service name already used in database" : "";
+    const addHoursReturn = addHoursData(serviceData);
+    if (!addHoursReturn.valid) {
+      error = addHoursReturn.error + error;
+    }
+
+    const serviceDataWithHours = addHoursReturn.data;
+
     const serviceDataWithOffered = {
       ...serviceDataWithHours,
       services_offered: serviceDataWithHours.services_offered.split(","),
     };
+
     const validatedService = await validateAndFormatServiceData(
       serviceDataWithOffered,
       nonprofit
     );
-    let error = exists ? "Service name already used in database" : "";
     if (!validatedService.valid) {
       error = validatedService.error + error;
     }
@@ -93,6 +109,7 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
 
 //TODO Add documentation
 function addHoursData(data) {
+  let error = "";
   const days = [
     "monday",
     "tuesday",
@@ -102,6 +119,10 @@ function addHoursData(data) {
     "saturday",
     "sunday",
   ];
+  const invalid_date = {
+    start: "1899-12-31T00:00:00.000Z",
+    end: "1899-12-31T00:00:00.000Z",
+  };
 
   let hours = days.map((day) => {
     const startKey = `${day}_start`;
@@ -111,21 +132,27 @@ function addHoursData(data) {
       // No hours set → return closed
       delete data[startKey];
       delete data[endKey];
-      return {
-        start: "1899-12-31T00:00:00.000Z",
-        end: "1899-12-31T00:00:00.000Z",
-      };
+      return invalid_date;
     }
-
-    const start = new Date(`1899-12-31 ${data[startKey]}`);
-    const end = new Date(`1899-12-31 ${data[endKey]}`);
+    const sKey = data[startKey].trim();
+    const eKey = data[endKey].trim();
     delete data[startKey];
     delete data[endKey];
-    return {
-      start: start.toISOString(),
-      end: end.toISOString(),
-    };
+    try {
+      const start = new Date(`1899-12-31 ${sKey}`);
+      const end = new Date(`1899-12-31 ${eKey}`);
+      return {
+        start: start.toISOString(),
+        end: end.toISOString(),
+      };
+    } catch {
+      error = `Invalid time format for ${day}`;
+      return invalid_date;
+    }
   });
   data.hours = hours;
-  return data;
+  if (error) {
+    return { ...errorReturn(error), data: data };
+  }
+  return successReturn(data);
 }

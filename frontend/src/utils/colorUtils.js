@@ -27,7 +27,7 @@ export function setColorVariables(mainColorGiven, darkModeValue = false) {
 
   // Set the colors
   let colors = {
-    background: `hsl(${hue}, 100%, ${darkMode(97)}%)`,
+    background: `hsl(0, 0%, ${darkMode(100)}%)`,
     text: `hsl(${hue}, 100%, ${darkMode(3)}%)`,
     "icon-background": `hsl(${hue}, 100%, 97%)`,
     "text-greyer": `hsl(${hue}, 30%, ${darkMode(30)}%)`,
