@@ -68,30 +68,30 @@ function validateAndExtractSearchData(data, nonprofit) {
   }
   // If multiple addresses are found, return an error with all possible addresses
   const places = data.places;
-  if (places.length > 1) {
-    let manyPlacesStr =
-      "Multiple addresses found matching that address. Please be more specific: ";
-    for (let i = 0; i < places.length; i++) {
-      manyPlacesStr += places[i].formattedAddress + ", ";
-    }
-    return errorReturn(manyPlacesStr); // Return an error object
-  } else {
-    const gottenCords = getCords(data.places[0]);
-    if (nonprofit) {
-      const radius = getRadiusAroundPointObject(
-        getCords(nonprofit.addressInfo),
-        nonprofitRadius
+  // if (places.length > 1) {
+  //   let manyPlacesStr =
+  //     "Multiple addresses found matching that address. Please be more specific: ";
+  //   for (let i = 0; i < places.length; i++) {
+  //     manyPlacesStr += places[i].formattedAddress + ", ";
+  //   }
+  //   return errorReturn(manyPlacesStr); // Return an error object
+  // } else {
+  const gottenCords = getCords(data.places[0]);
+  if (nonprofit) {
+    const radius = getRadiusAroundPointObject(
+      getCords(nonprofit.addressInfo),
+      nonprofitRadius
+    );
+    if (serviceInPerimeter(radius, gottenCords) === false) {
+      return errorReturn(
+        `We can not locate that address within ${nonprofitRadius} miles of the nonprofit please be more specific or try a different address`
       );
-      if (serviceInPerimeter(radius, gottenCords) === false) {
-        return errorReturn(
-          `We can not locate that address within ${nonprofitRadius} miles of the nonprofit please be more specific or try a different address`
-        );
-      }
     }
-
-    // if there is only one option return the data
-    return successReturn(data.places[0]); // Return the actual data instead of a container
   }
+
+  // if there is only one option return the data
+  return successReturn(data.places[0]); // Return the actual data instead of a container
+  // }
 }
 
 /**
