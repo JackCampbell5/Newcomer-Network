@@ -41,6 +41,8 @@ employeeRouter.get("/all", async (req, res, next) => {
 employeeRouter.get("/:employee_id", async (req, res, next) => {
   const { employee_id } = req.params;
   try {
+    [req, res] = checkLogin(req, res);
+    if (res.statusCode === 401) return;
     const findEmployee = await prisma.nonprofit_employee.findUnique({
       where: {
         id: employee_id,
@@ -147,6 +149,9 @@ employeeRouter.put("/:employee_id/edit", async (req, res, next) => {
   const employeeData = req.body.data;
   const nonprofit = req.nonprofit;
   try {
+    [req, res] = checkLogin(req, res);
+    if (res.statusCode === 401) return;
+
     const exists = await checkEmployeeId(employee_id, nonprofit, next);
     if (exists) {
       // If employee gives a new password, hash it
@@ -176,6 +181,8 @@ employeeRouter.delete("/:employee_id/delete", async (req, res, next) => {
   const { employee_id } = req.params;
   const nonprofit = req.nonprofit;
   try {
+    [req, res] = checkLogin(req, res);
+    if (res.statusCode === 401) return;
     const exists = await checkEmployeeId(employee_id, nonprofit, next);
     if (exists) {
       await prisma.nonprofit_employee.delete({
