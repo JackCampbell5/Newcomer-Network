@@ -31,6 +31,11 @@ function RegisterPage({ setLoggedIn, nav }) {
     return (
       <div className="RegisterPage">
         <h1>Register For a New Account</h1>
+        <p className="moreInfo">
+          As you as registering another user that is not yourself, remember to
+          sign out of their account before continuing. You have to have an
+          account to register new users.
+        </p>
         <div className="topButtons">
           <button onClick={goToLogin}>Login Instead?</button>
           <button onClick={() => navigate("/")}>Change Nonprofit</button>
