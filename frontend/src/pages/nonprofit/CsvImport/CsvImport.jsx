@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+
+// Local Imports
 import "./CsvImport.css";
+// Other components
+import RecList from "#components/RecList/RecList";
+import LoadingButton from "#components/LoadingButton/LoadingButton";
+//Util Functions
 import { uploadCsvServices } from "#utils/fetch/serviceFetchUtils";
 import { getNonProfit } from "#utils/pathUtils";
-import RecList from "#components/RecList/RecList";
 
 function CsvImport({}) {
+  // Constant Variables
   const nonprofit = getNonProfit();
+
+  // State Variables
   const [fileInput, setFileInput] = useState(null);
   const [errorText, setErrorText] = useState("");
   const [successText, setSuccessText] = useState("");
   const [importedServices, setImportedServices] = useState([]);
+  const [loading, setLoading] = useState(false);
   const handleChange = (event) => {
     setFileInput(event.target.files[0]);
   };
@@ -19,6 +28,7 @@ function CsvImport({}) {
   function uploadCsvCallback(result) {
     setErrorText("");
     setSuccessText("");
+    setLoading(false);
     if (result.valid) {
       if (result.data.length === 0) {
         setSuccessText("No invalid services to edit and then add");
@@ -30,6 +40,7 @@ function CsvImport({}) {
     }
   }
   function handleSubmit() {
+    setLoading(true);
     const formData = new FormData();
     formData.append("file", fileInput);
     uploadCsvServices(formData, nonprofit).then(uploadCsvCallback);
@@ -49,9 +60,11 @@ function CsvImport({}) {
             placeholder="UploadCSV..."
             onChange={handleChange}
           />
-          <button onClick={handleSubmit} className="submitButton">
-            Submit
-          </button>
+          <LoadingButton
+            onClick={handleSubmit}
+            loading={loading}
+            text={"Submit"}
+          />
           <div className="errorText">{errorText}</div>
           <div className="successText">{successText}</div>
         </div>
