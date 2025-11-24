@@ -90,6 +90,11 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
     }
     //TODO Check for required fields
 
+    const date_regex = /^(www|https|http)/; // TODO Improve regex for URL validation
+    if (!date_regex.test(date)) {
+      error += "Website URL is not valid. ";
+    }
+
     if (error) {
       serviceDataWithOffered.error = error;
       formattedData.push({
