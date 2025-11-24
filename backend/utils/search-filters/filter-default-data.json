@@ -37,7 +37,7 @@
     "default": "01-01-2025",
     "required": false,
     "icon": "MdDateRange",
-    "tooltip": "The date you entered the USA. In mm-dd-yyyy format. Ex: 01-01-2025",
+    "tooltip": "The date you entered the USA. In mm/dd/yyyy format. Ex: 01/01/2025",
     "type": "date"
   },
   {
@@ -54,7 +54,7 @@
     "default": "None",
     "required": false,
     "icon": "MdImportantDevices",
-    "tooltip": "The date you entered the USA. In mm-dd-yyyy format. Ex: 01-01-2025",
+    "tooltip": "What the most important factor is for you when you are searching for services",
     "type": "dropdown"
   }
 ]
