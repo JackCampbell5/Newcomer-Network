@@ -25,7 +25,7 @@ export function stringifyHours(hours) {
       let endHours = new Date(hour.end);
       let hours = "";
       if (startHours.toUTCString() === endHours.toUTCString()) {
-        hours = "Closed";
+        hours = "N/A";
       } else {
         hours = `${formatter.format(startHours)} - ${formatter.format(
           endHours
