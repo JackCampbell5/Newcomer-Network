@@ -43,6 +43,7 @@ async function main() {
     employees: [...employeeList.slice(employeeStart[num], employeeEnd[num]), adminEmployeeList[num]],
   }));
 
+  try{
   // Create nonprofits and adds to database
   await Promise.all(
     nonprofitList.map(async (profitInfo) => {
@@ -55,6 +56,9 @@ async function main() {
       });
     })
   );
+  } catch (err) {
+    console.error("Error creating nonprofits:", err);
+  }
 }
 
 /**

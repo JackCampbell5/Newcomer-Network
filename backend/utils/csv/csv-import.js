@@ -104,9 +104,18 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
       });
     } else {
       // TODO print a message for what services have been successfully added
-      await prisma.service.create({
-        data: { ...validatedService.data, nonprofit_ID: nonprofit.id },
-      });
+      try {
+        await prisma.service.create({
+          data: { ...validatedService.data, nonprofit_ID: nonprofit.id },
+        });
+      } catch (err) {
+        serviceDataWithOffered.error = err.message;
+        formattedData.push({
+          ...serviceDataWithOffered,
+          language: serviceDataWithOffered.language.split(","),
+          id: num++,
+        });
+      }
     }
   }
   return formattedData;

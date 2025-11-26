@@ -21,18 +21,22 @@ export async function createSearchLog(params, nonprofit, len, session) {
       : "",
     results_found: len,
   };
-  await prisma.web_log.create({
-    data: {
-      session_token: session.sessionUUID,
-      user_type: 0, // TODO - get user type when more logging is added
-      page_id: "search",
-      action: "searchServices",
-      nonprofit: {
-        connect: { id: nonprofit.id },
+  try {
+    await prisma.web_log.create({
+      data: {
+        session_token: session.sessionUUID,
+        user_type: 0, // TODO - get user type when more logging is added
+        page_id: "search",
+        action: "searchServices",
+        nonprofit: {
+          connect: { id: nonprofit.id },
+        },
+        search_log: {
+          create: searchQuery,
+        },
       },
-      search_log: {
-        create: searchQuery,
-      },
-    },
-  });
+    });
+  } catch (err) {
+    console.error("Error creating search log:", err);
+  }
 }
