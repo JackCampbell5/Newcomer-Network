@@ -1,6 +1,7 @@
 .Service {
   text-align: left;
   border-radius: 30px;
+  width: 90vw;
 }
 
 .borderYes {
@@ -113,16 +114,17 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 15px;
-  width: min(25%, 200px);
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 0px;
+  width: min(30%, 200px);
 }
 
 /* Just The Text Portion */
 .Service .serviceParam .serviceParamName .serviceParamNameText {
   width: calc(100% - 25px);
   font-weight: bolder;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
 }
 
 .Service .serviceBottom .serviceParam svg {
@@ -132,8 +134,13 @@
 
 /* The Right Column */
 .Service .serviceParam .serviceParamValue {
-  margin: 0 0 0 10px;
-  width: max(calc(75% - 10px), calc(100% - 190px));
+  padding: 0 20px 0 10px;
+  width: calc(98% - min(30%, 200px));
+}
+
+.Service .serviceParam .serviceParamValue a,
+.Service .serviceParam .serviceParamValue span {
+  overflow-wrap: anywhere;
 }
 
 /* Div in Table */
