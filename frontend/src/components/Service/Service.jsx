@@ -1,7 +1,7 @@
 // Node Module Imports
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { MdArrowDropDownCircle } from "react-icons/md";
+import { MdArrowDropDownCircle, MdOutlineWeb } from "react-icons/md";
 
 // Local Imports
 import "./Service.css";
@@ -66,7 +66,7 @@ function Service({ inputData }) {
     const completeTop = fillMissingDataFields(topData, serviceDisplayDefault);
     let completeBottom = fillMissingDataFields(
       bottomData,
-      serviceDisplayDefault
+      serviceDisplayDefault,
     );
     completeBottom = completeBottom.map((obj) => {
       obj.id === "hours" ? (obj.value = stringifyHours(obj.value)) : null;
@@ -100,12 +100,18 @@ function Service({ inputData }) {
                 serviceData.top.route_length < 10
                   ? "greenOutline"
                   : serviceData.top.route_length < 20
-                  ? "yellowOutline"
-                  : "redOutline",
+                    ? "yellowOutline"
+                    : "redOutline",
               ].join(" ")}
             >
               <div className="bigText">{serviceData.top.route_length}</div>
               <div className="smallText">Miles</div>
+            </div>
+          ) : null}
+          {!inputData.address ? (
+            <div className={["topParam", "greenOutline"].join(" ")}>
+              <div className="bigText">{<MdOutlineWeb />}</div>
+              <div className="smallText">Virtual</div>
             </div>
           ) : null}
           {serviceData.top.ranking ? (
@@ -115,8 +121,8 @@ function Service({ inputData }) {
                 serviceData.top.ranking > 75
                   ? "greenOutline"
                   : serviceData.top.ranking > 50
-                  ? "yellowOutline"
-                  : "redOutline",
+                    ? "yellowOutline"
+                    : "redOutline",
               ].join(" ")}
             >
               <div className="bigText">
@@ -142,7 +148,7 @@ function Service({ inputData }) {
       {expanded ? (
         <div className="serviceBottom">
           {serviceData.bottom.map((obj) => {
-            return obj?.value ? (
+            return obj?.value || obj.id === "address" ? (
               <div className="serviceParam" key={obj.id}>
                 <div className="serviceParamName">
                   {obj.icon
@@ -152,14 +158,20 @@ function Service({ inputData }) {
                 </div>
                 <div className="serviceParamValue">
                   {obj.id === "address" ? (
-                    <div>
-                      {obj.value}
-                      {" ("}
-                      <a href={links?.route} target="_blank">
-                        <strong>Directions</strong>
-                      </a>
-                      {")"}
-                    </div>
+                    inputData.addressInfo ? (
+                      <div>
+                        {obj.value}
+                        {" ("}
+                        <a href={links?.route} target="_blank">
+                          <strong>Directions</strong>
+                        </a>
+                        {")"}
+                      </div>
+                    ) : (
+                      <div className="virtualText">
+                        Virtual Service - Available Online
+                      </div>
+                    )
                   ) : obj.id === "website" ? (
                     <a href={obj.value} target="_blank">
                       {obj.value}

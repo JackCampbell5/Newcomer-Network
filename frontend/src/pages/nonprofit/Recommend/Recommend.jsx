@@ -51,7 +51,10 @@ function Recommend() {
           fit={true}
         />
       ) : (
-        <RecList data={searchResults} />
+        <RecList
+          serviceList={searchResults}
+          setServiceList={setSearchResults}
+        />
       )}
       <p className="errorText">{errorText}</p>
     </div>

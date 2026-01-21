@@ -15,9 +15,9 @@ datasource db {
 model service{
   id                    String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name                  String
-  address               String
+  address               String?
   addressInfo           Json?
-  zipcode               String
+  zipcode               String?
   description           String?
   email                 String?
   phone                 String?

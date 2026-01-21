@@ -9,13 +9,12 @@ import "./RecList.css";
 // Other components
 import RecService from "#components/RecService/RecService";
 
-function RecList({ data }) {
+function RecList({ serviceList, setServiceList }) {
   // Constant Variables
   const pageSize = 10;
-  let highestPage = Math.ceil(data.length / pageSize);
+  let highestPage = Math.ceil(serviceList.length / pageSize);
 
   // State Variables
-  const [serviceList, setServiceList] = useState(data);
   const [currentServices, setCurrentServices] = useState([]);
   const [successText, setSuccessText] = useState("");
   const [page, setPage] = useState(0);
@@ -27,7 +26,7 @@ function RecList({ data }) {
   function changePage(newPage) {
     setPage(newPage);
     setCurrentServices(
-      serviceList.slice(newPage * pageSize - pageSize, newPage * pageSize)
+      serviceList.slice(newPage * pageSize - pageSize, newPage * pageSize),
     );
   }
 
@@ -63,7 +62,7 @@ function RecList({ data }) {
     id,
     validData = {},
     editOnly = false,
-    deleteButtonUsed = false
+    deleteButtonUsed = false,
   ) {
     let updatedData;
     let updatedPage;
@@ -92,7 +91,8 @@ function RecList({ data }) {
   }
   useEffect(() => {
     changePage(1);
-  }, []);
+  }, [serviceList]);
+
   return (
     <div className="RecList">
       <p className="successText">{successText}</p>
@@ -147,7 +147,8 @@ function RecList({ data }) {
 }
 
 RecList.propTypes = {
-  data: PropTypes.array.isRequired,
+  serviceList: PropTypes.array.isRequired,
+  setServiceList: PropTypes.func.isRequired,
 };
 
 export default RecList;

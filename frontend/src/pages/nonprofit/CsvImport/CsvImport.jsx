@@ -54,9 +54,7 @@ function CsvImport({}) {
             type="file"
             name="file"
             icon="file text outline"
-            iconPosition="left"
             label="Upload CSV"
-            labelPosition="right"
             placeholder="UploadCSV..."
             onChange={handleChange}
           />
@@ -76,7 +74,10 @@ function CsvImport({}) {
             would instead like to delete that service please click the delete
             icon.
           </p>
-          <RecList data={importedServices} />
+          <RecList
+            serviceList={importedServices}
+            setServiceList={setImportedServices}
+          />
         </div>
       )}
     </div>

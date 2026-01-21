@@ -37,7 +37,12 @@ function ViewServices() {
   return (
     <div className="ViewServices">
       <h1>All Services</h1>
-      {searchResults.length > 0 ? <RecList data={searchResults} /> : null}
+      {searchResults.length > 0 ? (
+        <RecList
+          serviceList={searchResults}
+          setServiceList={setSearchResults}
+        />
+      ) : null}
       <p className="errorText">{errorText}</p>
     </div>
   );
