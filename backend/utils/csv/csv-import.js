@@ -15,11 +15,11 @@ export async function importCSV(file, nonprofit) {
     csvObject = csvObject.data;
   }
   csvObject = csvObject.filter((row) =>
-    Object.values(row).some((value) => value.trim() !== "")
+    Object.values(row).some((value) => value.trim() !== ""),
   );
   const servicesWithErrors = await addAllServicesAndGetErrors(
     csvObject,
-    nonprofit
+    nonprofit,
   );
   return successReturn(servicesWithErrors);
 }
@@ -83,12 +83,17 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
 
     const validatedService = await validateAndFormatServiceData(
       serviceDataWithOffered,
-      nonprofit
+      nonprofit,
     );
     if (!validatedService.valid) {
       error = validatedService.error + error;
     }
     //TODO Check for required fields
+
+    const website_regex = /^(www|https|http)/; // TODO Add more validation
+    if (!website_regex.test(serviceDataWithOffered.website)) {
+      error += "Website URL is not valid. ";
+    }
 
     if (error) {
       serviceDataWithOffered.error = error;
@@ -99,9 +104,18 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
       });
     } else {
       // TODO print a message for what services have been successfully added
-      await prisma.service.create({
-        data: { ...validatedService.data, nonprofit_ID: nonprofit.id },
-      });
+      try {
+        await prisma.service.create({
+          data: { ...validatedService.data, nonprofit_ID: nonprofit.id },
+        });
+      } catch (err) {
+        serviceDataWithOffered.error = err.message;
+        formattedData.push({
+          ...serviceDataWithOffered,
+          language: serviceDataWithOffered.language.split(","),
+          id: num++,
+        });
+      }
     }
   }
   return formattedData;

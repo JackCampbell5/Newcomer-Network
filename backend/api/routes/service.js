@@ -45,6 +45,9 @@ serviceRouter.get("/all", async (req, res, next) => {
       where: {
         nonprofit_ID: nonprofit.id,
       },
+      orderBy: {
+        name: "asc",
+      },
     });
     if (foundServices.length !== 0) {
       const formattedService = reformatServiceForReturn(foundServices);

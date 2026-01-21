@@ -188,11 +188,9 @@ function calculateRankingScoreForServices(foundServices, params, weights) {
     }
 
     // Add the date weight
-    if (
-      !date_entered ||
-      date_entered > new Date(service.date_created) ||
-      service.date_needed === null
-    ) {
+    if (!date_entered || !service.date_needed) {
+      ranking += weights.date / 2;
+    } else if (date_entered > new Date(service.date_needed)) {
       ranking += weights.date;
     }
     // If both day and time
@@ -302,11 +300,7 @@ async function isValidParams(query, nonprofit) {
   // Validate Date
   params.date_entered = "";
   if (date_entered_given) {
-    const date_valid = getAndValidateDate(date_entered_given);
-    if (!date_valid.valid) {
-      return errorReturn(date_valid.error);
-    }
-    params.date_entered = date_valid.data;
+    params.date_entered = new Date(date_entered_given);
   }
 
   // The time the user is available to attend
