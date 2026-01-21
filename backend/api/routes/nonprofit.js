@@ -113,6 +113,8 @@ nonprofitRouter.get("/id/:nonprofit_id", async (req, res, next) => {
 
 // Add a new nonprofit by id
 nonprofitRouter.post("/add", async (req, res, next) => {
+  [req, res] = checkLogin(req, res);
+  if (res.statusCode === 401) return;
   let nonProfitData = req.body;
   const name = nonProfitData.name;
   try {
@@ -139,6 +141,8 @@ nonprofitRouter.post("/add", async (req, res, next) => {
 
 // Edit a nonprofit by id
 nonprofitRouter.put("/:nonprofit_id/edit", async (req, res, next) => {
+  [req, res] = checkLogin(req, res);
+  if (res.statusCode === 401) return;
   const { nonprofit_id } = req.params;
   const nonProfitData = req.body;
   try {
@@ -163,6 +167,8 @@ nonprofitRouter.put("/:nonprofit_id/edit", async (req, res, next) => {
 
 // Delete a nonprofit by id
 nonprofitRouter.delete("/:nonprofit_id/delete", async (req, res, next) => {
+  [req, res] = checkLogin(req, res);
+  if (res.statusCode === 401) return;
   const { nonprofit_id } = req.params;
   try {
     const exists = await checkNonProfitId(nonprofit_id, next);

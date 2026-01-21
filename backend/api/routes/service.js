@@ -274,6 +274,8 @@ serviceRouter.post("/csv", upload.single("file"), async (req, res, next) => {
   const serviceData = req.file;
   const nonprofit = req.nonprofit;
   try {
+    [req, res] = checkLogin(req, res);
+    if (res.statusCode === 401) return;
     const result = await importCSV(serviceData, nonprofit);
     if (result.valid) {
       const reformatData = reformatServiceForReturn(result.data);
