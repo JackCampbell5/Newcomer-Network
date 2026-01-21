@@ -52,7 +52,12 @@ function SearchService() {
         searchFor={searchFor}
       />
       <p className="errorText">{errorText}</p>
-      {searchResults.length !== 0 ? <RecList data={searchResults} /> : null}
+      {searchResults.length !== 0 ? (
+        <RecList
+          serviceList={searchResults}
+          setServiceList={setSearchResults}
+        />
+      ) : null}
     </div>
   );
 }
