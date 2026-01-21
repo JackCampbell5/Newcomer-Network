@@ -21,11 +21,11 @@
   },
   "zipcode": {
     "id": "zipcode",
-    "name": "Zip Code*",
+    "name": "Zip Code",
     "value": "",
     "default": "12345",
     "icon": "MdNumbers",
-    "required": true,
+    "required": false,
     "type": "text"
   },
   "description": {
