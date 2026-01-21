@@ -15,11 +15,11 @@ export async function importCSV(file, nonprofit) {
     csvObject = csvObject.data;
   }
   csvObject = csvObject.filter((row) =>
-    Object.values(row).some((value) => value.trim() !== "")
+    Object.values(row).some((value) => value.trim() !== ""),
   );
   const servicesWithErrors = await addAllServicesAndGetErrors(
     csvObject,
-    nonprofit
+    nonprofit,
   );
   return successReturn(servicesWithErrors);
 }
@@ -83,15 +83,15 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
 
     const validatedService = await validateAndFormatServiceData(
       serviceDataWithOffered,
-      nonprofit
+      nonprofit,
     );
     if (!validatedService.valid) {
       error = validatedService.error + error;
     }
     //TODO Check for required fields
 
-    const date_regex = /^(www|https|http)/; // TODO Improve regex for URL validation
-    if (!date_regex.test(date)) {
+    const website_regex = /^(www|https|http)/; // TODO Add more validation
+    if (!website_regex.test(serviceDataWithOffered.website)) {
       error += "Website URL is not valid. ";
     }
 
