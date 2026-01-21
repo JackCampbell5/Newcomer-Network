@@ -11,12 +11,12 @@
   },
   "address": {
     "id": "address",
-    "name": "Address*",
+    "name": "Address",
     "value": "",
     "default": "123 Main St, Anytown, USA",
     "icon": "MdOutlineLocationOn",
-    "required": true,
-    "tooltip": "Complete address of the service(No PO BOX)",
+    "required": false,
+    "tooltip": "Complete address of the service (No PO BOX). Leave it blank for a virtual service.",
     "type": "text"
   },
   "zipcode": {

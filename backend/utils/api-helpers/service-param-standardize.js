@@ -90,14 +90,21 @@ export async function validateAndFormatServiceData(
   let updatedService = { ...serviceData };
   let errorMessage = "";
 
-  // Format address and add
-  let addressInfo = await formatAddress(updatedService.address, nonprofit);
+  // Format address only if provided
+  if (updatedService.address && updatedService.address.trim() !== '') {
+    let addressInfo = await formatAddress(updatedService.address, nonprofit);
 
-  if (!addressInfo.valid) {
-    errorMessage += addressInfo.error + ", ";
+    if (!addressInfo.valid) {
+      // Add the virtual service hint to error message
+      errorMessage += addressInfo.error + ". Leave it blank for a virtual service, ";
+    } else {
+      updatedService.addressInfo = addressInfo.data;
+      updatedService.address = addressInfo.data.formattedAddress;
+    }
   } else {
-    updatedService.addressInfo = addressInfo.data;
-    updatedService.address = addressInfo.data.formattedAddress;
+    // Virtual service - set both to null for consistency
+    updatedService.address = null;
+    updatedService.addressInfo = null;
   }
 
   // Format the addresses as an array

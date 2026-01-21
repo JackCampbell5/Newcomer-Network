@@ -152,6 +152,7 @@ function Service({ inputData }) {
                 </div>
                 <div className="serviceParamValue">
                   {obj.id === "address" ? (
+                    inputData.addressInfo ? (
                     <div>
                       {obj.value}
                       {" ("}
@@ -160,6 +161,11 @@ function Service({ inputData }) {
                       </a>
                       {")"}
                     </div>
+                    ) : (
+                      <span style={{ fontStyle: 'italic', color: '#666' }}>
+                        Virtual Service - Available Online
+                      </span>
+                    )
                   ) : obj.id === "website" ? (
                     <a href={obj.value} target="_blank">
                       {obj.value}

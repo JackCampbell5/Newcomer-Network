@@ -96,6 +96,13 @@ async function topServices(params, nonprofit) {
  */
 async function addRouteData(services, address) {
   for (let service of services) {
+    // Skip route calculation for virtual services
+    if (!service.addressInfo) {
+      service.route_length = null;
+      service.links = service.links ? service.links : {};
+      continue;
+    }
+
     let result = await routeBetween(address, service.addressInfo);
     if (result.valid) {
       service.route_length = result.data;
@@ -150,12 +157,15 @@ function calculateRankingScoreForServices(foundServices, params, weights) {
     let ranking = 0;
 
     if (service.addressInfo) {
-      // Add the address weight
+      // Physical location service - calculate distance
       const cords = getCords(service.addressInfo);
       const distance = calcDistance(cords, refugeeCords);
       if (distance < 20) {
         ranking += ((20 - distance) / 20) * weights.address;
       }
+    } else {
+      // Virtual service - give full address weight (accessible to everyone)
+      ranking += weights.address;
     }
 
     let serviceWeightAlreadyAdded = false;
