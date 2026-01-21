@@ -121,7 +121,7 @@
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   .Service .serviceParam .serviceParamName {
     flex-wrap: wrap;
     column-gap: 15px;
