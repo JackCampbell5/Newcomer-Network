@@ -114,10 +114,20 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  column-gap: 15px;
-  row-gap: 0px;
-  width: min(30%, 200px);
+
+  /* Laptop / wide (default) */
+  gap: 15px;
+  width: min(25%, 200px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Service .serviceParam .serviceParamName {
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 0px;
+    width: min(30%, 200px);
+  }
 }
 
 /* Just The Text Portion */
