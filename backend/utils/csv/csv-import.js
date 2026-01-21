@@ -92,7 +92,7 @@ async function addAllServicesAndGetErrors(csvObject, nonprofit) {
 
     const website_regex = /^(www|https|http)/; // TODO Add more validation
     if (!website_regex.test(serviceDataWithOffered.website)) {
-      error += "Website URL is not valid. ";
+      error += ". Website URL is not valid. ";
     }
 
     if (error) {
