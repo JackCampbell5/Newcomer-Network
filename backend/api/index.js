@@ -22,8 +22,8 @@ if (!isProd) {
   app.use(
     cors({
       credentials: true,
-      origin: isProd ? process.env.FRONTEND_URL : "http://localhost:5173",
-    })
+      origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    }),
   );
 }
 
@@ -56,7 +56,7 @@ app.use(
     },
     resave: false,
     saveUninitialized: false,
-  })
+  }),
 );
 
 // Serve static files from the React build directory if in prod mode
